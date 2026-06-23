@@ -108,10 +108,10 @@ export default function SubmitClient() {
             <label className="block text-sm font-medium text-surface-700 mb-1.5">
               URL
             </label>
-            <input
-              type="url"
+            <textarea
               value={link}
               onChange={e => setLink(e.target.value)}
+              rows={12}
               placeholder="https://example.com/your-link"
               className="input-field font-mono text-sm"
               disabled={isLimitReached || submitting}
