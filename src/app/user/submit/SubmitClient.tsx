@@ -113,7 +113,7 @@ export default function SubmitClient() {
               onChange={e => setLink(e.target.value)}
               rows={12}
               placeholder="https://example.com/your-link"
-              className="input-field font-mono text-sm"
+              className="input-field font-mono text-sm w-full"
               disabled={isLimitReached || submitting}
               required
             />
