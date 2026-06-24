@@ -25,7 +25,12 @@ export async function POST(request: Request) {
 }
 
 const cleanedLinks = links
-  .map((l: string) => l.trim())
+  .map((l: string) =>
+    l
+      .trim()
+      .replace(/^"+|"+$/g, "")
+      .replace(/\t/g, "")
+  )
   .filter(Boolean)
   .filter((l: string) => isValidUrl(l));
 
